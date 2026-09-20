@@ -26,7 +26,9 @@ O site estático fica em `dist/`, sem servidor de aplicação ou banco. Apenas o
 
 ## Publicação
 
-Site: https://souomeneses.souomeneses.workers.dev
+Site: https://links.omeneses.com
+
+Endereço alternativo: https://souomeneses.souomeneses.workers.dev
 
 Hospedado no Cloudflare Workers Static Assets, configurado em `wrangler.jsonc`. Para atualizar, edite `src/content.json` e execute `npm run deploy` (requer login da Cloudflare via `npx wrangler login`). O comando faz build, verifica os links e publica os arquivos estáticos.
 
