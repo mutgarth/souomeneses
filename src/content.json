@@ -1,0 +1,63 @@
+{
+  "name": "souomeneses",
+  "tagline": "building with AI",
+  "topLabel": "meu trabalho",
+  "projects": [
+    {
+      "name": "Memory Module",
+      "url": "https://memorymodule.io",
+      "logo": "/logos/memory-module.svg",
+      "label": "AI MEMORY"
+    },
+    {
+      "name": "Glifo.ai",
+      "url": "https://glifo.ai",
+      "logo": "/logos/glifo.png",
+      "label": "CREATE WITH AI"
+    },
+    {
+      "name": "MCPocket",
+      "url": "https://mcpocket.dev",
+      "logo": "/logos/mcpocket.svg",
+      "label": "DEV TOOLS"
+    }
+  ],
+  "community": {
+    "name": "Vibe Mode",
+    "label": "comunidade no Discord",
+    "url": "https://discord.gg/czSvnQGNH",
+    "logo": "/logos/discord.svg"
+  },
+  "socials": [
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/souomeneses/",
+      "logo": "/logos/instagram.svg"
+    },
+    {
+      "name": "TikTok",
+      "url": "https://www.tiktok.com/@souomeneses",
+      "logo": "/logos/tiktok.svg"
+    },
+    {
+      "name": "Threads",
+      "url": "https://www.threads.com/@souomeneses",
+      "logo": "/logos/threads.svg"
+    },
+    {
+      "name": "X",
+      "url": "https://x.com/souomeneses",
+      "logo": "/logos/x.svg"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com/@iniciAI",
+      "logo": "/logos/youtube.svg"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/mutgarth",
+      "logo": "/logos/github.svg"
+    }
+  ]
+}

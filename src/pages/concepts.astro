@@ -1,0 +1,21 @@
+---
+const concepts = [
+  { slug: 'station', name: 'Estação orbital', number: '01', note: 'Hardware espacial · branco, preto e amarelo' },
+  { slug: 'terminal', name: 'Terminal pessoal', number: '02', note: 'Dev & retrô · preto e âmbar' },
+  { slug: 'orbit', name: 'Órbita pixel', number: '03', note: 'Universo pessoal · estrelas e pixels' },
+];
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>souomeneses — três direções</title>
+    <style>
+      * { box-sizing: border-box; } body { margin: 0; background: #e2e2df; color: #222; font: 14px 'Helvetica Neue', Helvetica, sans-serif; }
+      main { max-width: 1500px; margin: auto; padding: 32px; } header { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; margin-bottom: 29px; } h1 { margin: 0; font-size: 23px; font-weight: 500; letter-spacing: -.6px; } header p { margin: 0; color: #64645f; font-size: 12px; }
+      .grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 24px; } h2 { font-size: 15px; font-weight: 500; margin: 0; } h2 span { font: 10px monospace; color: #75756d; margin-right: 10px; } .heading { display: flex; justify-content: space-between; align-items: center; gap: 5px; } a { color: #333; font-size: 12px; text-underline-offset: 4px; } a:focus-visible { outline: 2px solid #292929; outline-offset: 4px; } .note { font-size: 11px; color: #666; margin: 9px 0 17px; } iframe { width: 100%; height: 760px; border: 1px solid #bdbeb7; background: #f6f6f0; }
+      @media(max-width: 950px) { main { padding: 24px 18px; } .grid { grid-template-columns: 1fr; max-width: 440px; margin: auto; gap: 32px; } header { display: block; } header p { margin-top: 10px; } }
+    </style>
+  </head>
+  <body><main><header><h1>Uma bio. Três universos.</h1><p>souomeneses / estudos visuais</p></header><div class="grid">{concepts.map(concept => <section><div class="heading"><h2><span>{concept.number}</span>{concept.name}</h2><a href={`/${concept.slug}/`}>Abrir ↗</a></div><p class="note">{concept.note}</p><iframe src={`/${concept.slug}/`} title={concept.name}></iframe></section>)}</div></main></body>
+</html>
