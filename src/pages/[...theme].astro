@@ -44,7 +44,7 @@ const { projects, community } = content;
       .project strong { display: block; font: 600 15px/1.4 'Helvetica Neue', Helvetica, sans-serif; }
       .project small { display: block; font-size: 8px; letter-spacing: .1em; margin-top: 4px; opacity: .55; }
       .arrow { margin-left: auto; font-size: 20px; }
-      .community { display: flex; gap: 14px; align-items: center; padding: 18px; margin-top: 24px; min-height: 74px; }
+      .community { display: flex; gap: 14px; align-items: center; padding: 18px; margin: 0 0 24px; min-height: 74px; }
       .community strong { font-size: 14px; display: block; }
       .community small { font-size: 10px; display: block; margin-top: 5px; }
       .community img { width: 25px; height: 25px; flex-shrink: 0; }
@@ -101,15 +101,16 @@ const { projects, community } = content;
           {content.socials.map(social => <a href={social.url} target="_blank" rel="noopener noreferrer" aria-label={`${social.name} (abre em nova aba)`} title={social.name}><img src={social.logo} alt="" width="24" height="24" /></a>)}
         </nav>
       </header>
+      <a class="community" href={community.url} target="_blank" rel="noopener noreferrer" aria-label={`${community.name}, ${community.label} (abre em nova aba)`}>
+        <img src={community.logo} alt="" width="25" height="25" />
+        <span><strong>{community.name}</strong><small>{community.label}</small></span><span class="arrow" aria-hidden="true">↗</span>
+      </a>
       <div class="section-label"><span>{theme === 'orbit' ? 'IN MY ORBIT' : 'PROJETOS'}</span><span>01 — {String(projects.length).padStart(2, "0")}</span></div>
       <div class="terminal-bar" aria-hidden="true"><span>+ projects</span><span>{projects.length} entries</span></div>
       <nav class="links" aria-label="Meus projetos">
         {projects.map(project => <a class="project" href={project.url} target="_blank" rel="noopener noreferrer"><span class="icon" aria-hidden="true"><img src={project.logo} alt="" width="30" height="30" /></span><span><strong>{project.name}</strong><small>{project.label}</small></span><span class="arrow" aria-hidden="true">↗</span><span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"> (abre em nova aba)</span></a>)}
       </nav>
-      <a class="community" href={community.url} target="_blank" rel="noopener noreferrer" aria-label={`${community.name}, ${community.label} (abre em nova aba)`}>
-        <img src={community.logo} alt="" width="25" height="25" />
-        <span><strong>{community.name}</strong><small>{community.label}</small></span><span class="arrow" aria-hidden="true">↗</span>
-      </a>
+
       <footer><span>{theme === 'terminal' ? '// always building' : 'MADE OF CURIOSITY'}</span><span aria-hidden="true">{theme === 'orbit' ? '✦ · ✧' : '[ LM ]'}</span></footer>
     </main>
     {theme === 'orbit' && <script is:inline type="module" src="/orbit.js"></script>}
