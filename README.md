@@ -26,7 +26,11 @@ O site estático fica em `dist/`, sem servidor de aplicação ou banco. Apenas o
 
 ## Publicação
 
-Cloudflare Pages: comando `npm run build && npm test`, saída `dist`, Node.js 22. A integração com GitHub publica novos commits automaticamente. Também é possível enviar a pasta `dist` via Wrangler.
+Site: https://souomeneses.souomeneses.workers.dev
+
+Hospedado no Cloudflare Workers Static Assets, configurado em `wrangler.jsonc`. Para atualizar, edite `src/content.json` e execute `npm run deploy` (requer login da Cloudflare via `npx wrangler login`). O comando faz build, verifica os links e publica os arquivos estáticos.
+
+O repositório é público: https://github.com/mutgarth/souomeneses . O push no GitHub ainda não dispara deploy automaticamente; a publicação atual usa o comando acima. Nenhuma credencial é armazenada no repositório.
 
 A página principal está em `/`; os estudos anteriores ficam em `/station/`, `/terminal/` e `/concepts/`. `/orbit/` mantém acesso à versão escolhida.
 
